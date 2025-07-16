@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import NavBar from './components/NavBar';
+import News from './components/News';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
+
+export default class App extends Component {
+  // static propTypes = {second: third}
+
+  render() {
+    return (
+      <>
+      <Router>
+      <NavBar/>
+       <Routes>
+          <Route exact  path="/" element ={<News key="general" pageSize='6' category='general'/>}/>
+          <Route exact  path="/science" element ={<News key="science" pageSize='6' category='science'/>}/>
+          <Route exact  path="/sports" element ={<News key="sports" pageSize='6' category='sports'/>}/>
+        </Routes>
+      </Router>
+      </>
+    )
+  }
 }
 
-export default App;
+
