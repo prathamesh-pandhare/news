@@ -19,7 +19,7 @@ export class NavBar extends Component {
                 <Link className="nav-link" to="/sports">sports</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/science">sciencce</Link>
+                <Link className="nav-link" to="/science">science</Link>
                 </li>
                 
                 
