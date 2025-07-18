@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class NewsItem extends Component {
-  render() {
-    let { title, description, imageurl, more, author, date,name } = this.props;
+const NewsItem = (props)=> {
+  
+    let { title, description, imageurl, more, author, date,name } = props;
     return (
       <div className="card position-relative">
         <span
@@ -38,6 +38,6 @@ export class NewsItem extends Component {
       </div>
     );
   }
-}
+
 
 export default NewsItem;
